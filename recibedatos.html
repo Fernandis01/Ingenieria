@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function getUrlVars() {
+				  var vars = {};
+				  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, 
+				  function(m,key,value) {
+					vars[key] = value;
+				  });
+				  return vars;
+				}
+		
+				var nombre = getUrlVars()["fname"];
+				var apellido= getUrlVars()["lname"];
+				var colorp = getUrlVars()["lcolor"];
+				var ltallap= getUrlVars()["ltalla"];
+				var ops=0;
+				var ad1=getUrlVars()["empaque1"];
+				if(ad1!=undefined) ops++;
+				var ad2=getUrlVars()["empaque2"];
+				if(ad2!=undefined) ops++;
+				var ad2=getUrlVars()["empque3"];
+				if(ad3!=undefined) ops++;
+				var ad3=getUrlVars()["nota"];
+				if(ad4!=undefined) ops++;
+				var ad4=getUrlVars()["prueba"];
+				if(ad5!=undefined) ops++;
+				//alert("chk= " +ops+": "+ ad1+ " - " +ad2 + " - "+ad3);
+				//alert("fname= " + nombre);
+		</script>         
+	</head>
+<body>
+
+<h2>Pedido Recibido</h2>
+
+<p>Recibe datos</p>
+
+<h3> Cliente</h3>
+<p id="Nombre">    </p>
+
+<h4>Pedido</h4>
+<p id="detalle">   </p>
+
+<script>
+	document.getElementById("Nombre").innerHTML=nombre+" "+apellido;
+	document.getElementById("detalle").innerHTML= "El color es: " +colorp+ " <br> La talla es: "+ltallap+"<br>  Tipo de caja: "+ad1+" <br>Opcion: "+ad3+" <br> Eligio:  "+ad4;
+</script>
+
+
+</body>
+</html>
